@@ -1,0 +1,42 @@
+converted the checkLogin function written in  simple javascript to ES6.
+
+let checkLogin = (email,password,allUsers) => {  // parameters are passed, arrow function is used
+	let isUserFound = false;
+	let passwordCorrect = false;
+
+	for (currentUser of allUsers){  //   for of loop is used because we have an array of object
+		console.log(currentUser)
+		if(currentUser.email==email){   // conditions 
+			if(currentUser.password==password){
+				isUserFound = true;
+				passwordCorrect = true;
+				break;   //break statement is used if condition is passed
+			}else{
+				isUserFound = true;
+				passwordCorrect = false;
+				break;
+			}
+		}	else{
+			isUserFound = false;
+		}
+	} 	//end for of loop
+
+	if (isUserFound == true && passwordCorrect == true){
+		alert('you are logged in');
+	} else if (isUserFound == true && passwordCorrect == false){
+		alert('you have provided incorrect password');
+	} else {
+		alert('no user with this email found');
+	}
+} // end checkLogin function
+
+let email = prompt('enetr your email');   // input or argument for email is taken through prompt
+let password = prompt('enter your password'); // input or argument for password is taken through prompt
+checkLogin(email,password,users);  // invoked or calling function
+
+
+desription
+1.let keyword is used to declare a function and we have used ES6 arrow function denoted by =>.
+2.For of loop, is used because ES6 provide us the loop for iterate through array.
+3.we have taken inputs from prompt.
+4.finally, called the function.

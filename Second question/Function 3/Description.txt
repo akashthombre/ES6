@@ -1,0 +1,43 @@
+Write a function to search episode by its name.
+
+
+//function to search episode by its name
+
+// function decleration
+let episodeName = (name) => {  //  name is a parameter passed using arrow function 
+
+  for ( let episode of tvShows._embedded.episodes){ // for of loop,is used for iterate
+
+    if(episode.name == name){  //condition
+
+      console.log("Episode Found");
+
+      console.log(episode); //  episode info is searched in console
+
+      break;  // break statmemnt
+
+    } else{
+      // do nothing
+    }
+
+  }// end for of loop
+
+}// end function
+
+let name = prompt("enter episode name");  //argument or input is taken from prompt 
+
+
+episodeName(name);  //invoking function and passing arguments
+
+__________Description_________
+1. function to search episode by its name.
+2.ES6 arrow function is used and pass parameter as episode name.
+3.For of loop is used for iterate.
+4.after that condition is given.
+5.Argument is taken from prompt.
+6.Finally invoked the function.
+
+
+
+
+

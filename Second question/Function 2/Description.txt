@@ -1,0 +1,47 @@
+Write a function that can take any number of episode ids as input and
+returns all the information about those episodes.
+
+//function takes number of inputs of ids and display information about that episodes
+
+// function decleration
+
+let episodeInfo = (...episodeIds) => {  // ES6 Rest parameter used, for multiple  inputs taken
+
+	for ( let id of episodeIds) // iterate for id
+	{
+  for ( let episode of tvShows._embedded.episodes){ 
+
+    if(id == episode.id){  // condition
+      
+      console.log(episode); //Display output in console
+
+      break;
+      
+  } else{
+  	//do nothing
+  }
+    } 
+  }
+} // function end here
+
+//we can pass as many as arguments
+
+let oneId = prompt("enter first episode id");  //first id as argument
+
+let secondId = prompt("enter second episode id");  // second id as argument
+
+let thirdId = prompt("Enter third id ");  // third is as argument
+
+
+episodeInfo(oneId,secondId,thirdId); //function invoke
+
+
+_____________Description_____________
+
+1.ES6 arrow function is used.
+2.REST parameter is used of ES6, for multiple inputs.
+3.For multiple ids, we use seperate for loop for ids.
+4.condition is passed.
+5.use prompt for multiple inputs pass.
+6. we can pass multiple arguments.
+7.finally invoke the function

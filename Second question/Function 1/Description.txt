@@ -1,0 +1,44 @@
+Write a function that takes Season number and episode number as input
+and gives all the information about that particular episode as output.
+
+
+
+// function decleration
+let episodeInfo = (seasonNumber,episodeNumber) => {  //parametrs are passed season number & episode number using arrow function
+
+  for ( episode of tvShows._embedded.episodes){ // for of loop,is used for iterate
+
+    if(episode.season == seasonNumber && episode.number == episodeNumber){  //condition
+
+      console.log(episode); // display particular episode info in console
+
+      break;  // break statmemnt
+
+    } else{
+      // do nothing
+    }
+  }
+}
+
+let seasonNumber = prompt("enter season number");  //argument or input in prompt for season number
+
+let episodeNumber = prompt("enter episode number");//argument or input in prompt for epsidoe number
+
+episodeInfo(seasonNumber,episodeNumber);  //invoking function and passing arguments
+
+
+_____________Description____________
+
+1.Function that display all information of that particular episode which takes season number & episode number as parameter.
+2.ES6 arrow function is used
+3.for of loop is used for iterate.
+4.condition  
+  if(episode.season == seasonNumber && episode.number == episodeNumber){  //condition
+
+      console.log(episode); // display particular episode info in console
+
+      break;  // break statmemnt
+
+    }
+5.take input from prompt .
+6.Finally call the function.
